@@ -21,7 +21,7 @@ const TypeScreen = props => {
           checked={props.type === "Maison" ? true : false}
           // On met à jour la valeur type
           onChange={event => {
-            props.setType(event.target.checked);
+            props.setType(event.target.name);
           }}
           className={props.type === "Maison" ? "box-selected" : "box"}
         />
@@ -29,7 +29,7 @@ const TypeScreen = props => {
           name="Appartement"
           checked={props.type === "Appartement" ? true : false}
           onChange={event => {
-            props.setType(event.target.checked);
+            props.setType(event.target.name);
           }}
           className={props.type === "Appartement" ? "box-selected" : "box"}
         />

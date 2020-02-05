@@ -18,7 +18,7 @@ const SituationScreen = props => {
           name={"Locataire"}
           checked={props.situation === "Locataire" ? true : false}
           onChange={event => {
-            props.setSituation(event.target.checked);
+            props.setSituation(event.target.name);
           }}
           className={props.situation === "Locataire" ? "box-selected" : "box"}
         />
@@ -26,7 +26,7 @@ const SituationScreen = props => {
           name={"Propriétaire"}
           checked={props.situation === "Propriétaire" ? true : false}
           onChange={event => {
-            props.setSituation(event.target.checked);
+            props.setSituation(event.target.name);
           }}
           className={
             props.situation === "Propriétaire" ? "box-selected" : "box"
@@ -40,7 +40,7 @@ const SituationScreen = props => {
               : false
           }
           onChange={event => {
-            props.setSituation(event.target.checked);
+            props.setSituation(event.target.name);
           }}
           className={
             props.situation === "Bénéficiaire d'un logement de fonction"

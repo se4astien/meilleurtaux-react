@@ -19,7 +19,7 @@ const EtatScreen = props => {
           name="Ancien"
           checked={props.etat === "Ancien" ? true : false}
           onChange={event => {
-            props.setEtat(event.target.checked);
+            props.setEtat(event.target.name);
           }}
           className={props.etat === "Ancien" ? "box-selected" : "box"}
         />
@@ -27,7 +27,7 @@ const EtatScreen = props => {
           name="Neuf"
           checked={props.etat === "Neuf" ? true : false}
           onChange={event => {
-            props.setEtat(event.target.checked);
+            props.setEtat(event.target.name);
           }}
           className={props.etat === "Neuf" ? "box-selected" : "box"}
         />

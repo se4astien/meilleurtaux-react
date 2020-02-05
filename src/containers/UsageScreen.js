@@ -18,7 +18,7 @@ const UseScreen = props => {
           name="Résidence Principale"
           checked={props.use === "Résidence Principale" ? true : false}
           onChange={event => {
-            props.setUse(event.target.checked);
+            props.setUse(event.target.name);
           }}
           className={
             props.use === "Résidence Principale" ? "box-selected" : "box"
@@ -28,7 +28,7 @@ const UseScreen = props => {
           name="Résidence Secondaire"
           checked={props.use === "Résidence Secondaire" ? true : false}
           onChange={event => {
-            props.setUse(event.target.checked);
+            props.setUse(event.target.name);
           }}
           className={
             props.use === "Résidence Secondaire" ? "box-selected" : "box"
@@ -38,7 +38,7 @@ const UseScreen = props => {
           name="Investissement Locatif"
           checked={props.use === "Investissement Locatif" ? true : false}
           onChange={event => {
-            props.setUse(event.target.checked);
+            props.setUse(event.target.name);
           }}
           className={
             props.use === "Investissement Locatif" ? "box-selected" : "box"

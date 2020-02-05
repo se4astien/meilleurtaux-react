@@ -9,7 +9,7 @@ const AdminIdScreen = props => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://meilleurtaux-node.herokuapp.com/search/" + id
+        "https://meilleurtaux-back.herokuapp.com/search/" + id
       );
       setDossById(response.data);
       console.log("HERE", response.data);

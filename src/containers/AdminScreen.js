@@ -12,7 +12,7 @@ const AdminScreen = props => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://meilleurtaux-node.herokuapp.com/search"
+        "https://meilleurtaux-back.herokuapp.com/search"
       );
       setDoss(response.data);
     } catch (error) {
@@ -26,7 +26,7 @@ const AdminScreen = props => {
   const removeData = async id => {
     try {
       const responseBis = await axios.post(
-        "https://meilleurtaux-node.herokuapp.com/delete/" + id
+        "https://meilleurtaux-back.herokuapp.com/delete/" + id
       );
     } catch (error) {
       console.log(error.message);
