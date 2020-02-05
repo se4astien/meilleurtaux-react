@@ -18,7 +18,7 @@ const MailScreen = props => {
     try {
       // On envoie les éléménts à la BDD
       const response = await axios.post(
-        "https://meilleurtaux-node.herokuapp.com/createprojet",
+        "https://meilleurtaux-back.herokuapp.com/createprojet",
         {
           type: props.type,
           state: props.etat,
@@ -83,9 +83,9 @@ const MailScreen = props => {
           <Link to="/AmountsScreen">
             <p
               className="previous"
-              // onClick={() => {
-              //   Cookies.set("Mail", props.mail);
-              // }}
+              onClick={() => {
+                Cookies.set("Mail", props.mail);
+              }}
             >
               Précédent
             </p>
