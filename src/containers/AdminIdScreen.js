@@ -24,11 +24,6 @@ const AdminIdScreen = props => {
   return (
     <div className="body">
       <div className="wrapper">
-        {/* <Link to="/Admin">
-          <button>
-            <p>Retour</p>
-          </button>
-        </Link> */}
         <p>Dossier numéro : {dossById.total}</p>
         <p>Type de bien : {dossById.type}</p>
         <p>Etat du bien : {dossById.state}</p>
