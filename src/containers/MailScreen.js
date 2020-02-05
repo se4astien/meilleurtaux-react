@@ -22,7 +22,7 @@ const MailScreen = props => {
         {
           type: props.type,
           state: props.etat,
-          usage: props.usage,
+          use: props.use,
           situation: props.situation,
           country: props.country,
           city: props.city,

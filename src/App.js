@@ -30,7 +30,7 @@ function App() {
   // --- Screen 02
   const [etat, setEtat] = useState(Cookies.get("Etat"));
   // --- Screen 03
-  const [usage, setUsage] = useState(Cookies.get("Usage"));
+  const [use, setUse] = useState(Cookies.get("Usage"));
   // --- Screen 04
   const [situation, setSituation] = useState(Cookies.get("Situation"));
   // --- Screen 05
@@ -69,7 +69,7 @@ function App() {
           <EtatScreen etat={etat} setEtat={setEtat} setPages={setPages} />
         </Route>
         <Route path="/UsageScreen">
-          <UsageScreen usage={usage} setUsage={setUsage} />
+          <UsageScreen use={use} setUse={setUse} />
         </Route>
         <Route path="/SituationScreen">
           <SituationScreen situation={situation} setSituation={setSituation} />
@@ -101,7 +101,7 @@ function App() {
             setMail={setMail}
             type={type}
             etat={etat}
-            usage={usage}
+            use={use}
             situation={situation}
             country={country}
             city={city}

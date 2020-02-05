@@ -12,13 +12,13 @@ const UseScreen = props => {
 
   // fonction pour mettre à jour l'état 'use'
   const onChangePrincipal = () => {
-    props.setUsage("Résidence Principale");
+    props.setUse("Résidence Principale");
   };
   const onChangeSecond = () => {
-    props.setUsage("Résidence Secondaire");
+    props.setUse("Résidence Secondaire");
   };
   const onChangeLoc = () => {
-    props.setUsage("Investissement Locatif");
+    props.setUse("Investissement Locatif");
   };
 
   return (
@@ -28,34 +28,34 @@ const UseScreen = props => {
         <InputRadio
           name="Résidence Principale"
           onChange={onChangePrincipal}
-          checked={props.usage === "Résidence Principale" ? true : false}
+          checked={props.use === "Résidence Principale" ? true : false}
           className={
-            props.usage === "Résidence Principale" ? "box-selected" : "box"
+            props.use === "Résidence Principale" ? "box-selected" : "box"
           }
         />
         <InputRadio
           name="Résidence Secondaire"
           onChange={onChangeSecond}
-          checked={props.usage === "Résidence Secondaire" ? true : false}
+          checked={props.use === "Résidence Secondaire" ? true : false}
           className={
-            props.usage === "Résidence Secondaire" ? "box-selected" : "box"
+            props.use === "Résidence Secondaire" ? "box-selected" : "box"
           }
         />
         <InputRadio
           name="Investissement Locatif"
           onChange={onChangeLoc}
-          checked={props.usage === "Investissement Locatif" ? true : false}
+          checked={props.use === "Investissement Locatif" ? true : false}
           className={
-            props.usage === "Investissement Locatif" ? "box-selected" : "box"
+            props.use === "Investissement Locatif" ? "box-selected" : "box"
           }
         />
       </div>
       <Step
         previous="/EtatScreen"
         next="/SituationScreen"
-        state={props.usage}
+        state={props.use}
         nameCookie="Usage"
-        valueCookie={props.usage}
+        valueCookie={props.use}
         namePage="Usage"
         setPages={props.setPages}
         pages={props.pages}

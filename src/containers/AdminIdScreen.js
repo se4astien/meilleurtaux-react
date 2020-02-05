@@ -32,7 +32,7 @@ const AdminIdScreen = props => {
         <p>Dossier numéro : {dossById.total}</p>
         <p>Type de bien : {dossById.type}</p>
         <p>Etat du bien : {dossById.state}</p>
-        <p>Usage du bien : {dossById.usage}</p>
+        <p>Usage du bien : {dossById.use}</p>
         <p>Situation actuelle : {dossById.situation}</p>
         <p>Pays : {dossById.country}</p>
         <p>Ville/Code Postal: {dossById.city}</p>
