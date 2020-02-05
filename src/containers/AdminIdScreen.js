@@ -9,7 +9,7 @@ const AdminIdScreen = props => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://backend-certif-meilleurtaux.herokuapp.com/search/" + id
+        "https://meilleurtaux-node.herokuapp.com/search/" + id
       );
       setDossById(response.data);
       console.log("HERE", response.data);
@@ -32,7 +32,7 @@ const AdminIdScreen = props => {
         <p>Dossier numéro : {dossById.total}</p>
         <p>Type de bien : {dossById.type}</p>
         <p>Etat du bien : {dossById.state}</p>
-        <p>Usage du bien : {dossById.use}</p>
+        <p>Usage du bien : {dossById.usage}</p>
         <p>Situation actuelle : {dossById.situation}</p>
         <p>Pays : {dossById.country}</p>
         <p>Ville/Code Postal: {dossById.city}</p>

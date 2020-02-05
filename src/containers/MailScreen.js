@@ -17,19 +17,22 @@ const MailScreen = props => {
   const fetchData = async () => {
     try {
       // On envoie les éléménts à la BDD
-      const response = await axios.post("http://localhost:4000/devis/create/", {
-        type: props.type,
-        state: props.etat,
-        usage: props.usage,
-        situation: props.situation,
-        country: props.country,
-        city: props.city,
-        amountProperty: props.amountProperty,
-        amountWorks: props.amountWorks,
-        notary: props.notary,
-        total: props.total,
-        mail: props.mail
-      });
+      const response = await axios.post(
+        "https://meilleurtaux-node.herokuapp.com/createprojet",
+        {
+          type: props.type,
+          state: props.etat,
+          usage: props.usage,
+          situation: props.situation,
+          country: props.country,
+          city: props.city,
+          amountProperty: props.amountProperty,
+          amountWorks: props.amountWorks,
+          notary: props.notary,
+          total: props.total,
+          mail: props.mail
+        }
+      );
       props.setDossier(response.data);
     } catch (error) {}
   };

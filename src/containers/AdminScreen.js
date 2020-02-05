@@ -11,7 +11,9 @@ const AdminScreen = props => {
   console.log("password", password);
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/devis/search");
+      const response = await axios.get(
+        "https://meilleurtaux-node.herokuapp.com/search"
+      );
       setDoss(response.data);
     } catch (error) {
       console.log(error.message);
@@ -24,7 +26,7 @@ const AdminScreen = props => {
   const removeData = async id => {
     try {
       const responseBis = await axios.post(
-        "http://localhost:4000/devis/delete/" + id
+        "https://meilleurtaux-node.herokuapp.com/delete/" + id
       );
     } catch (error) {
       console.log(error.message);

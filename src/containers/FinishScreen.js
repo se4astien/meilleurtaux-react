@@ -8,6 +8,7 @@ const FinishScreen = props => {
         <p>
           Votre numéro de dossier est le :
           <span className="folder-number">{props.dossier}</span>
+          {console.log(props.dossier)};
         </p>
       </div>
     </div>
