@@ -9,18 +9,19 @@ import Mentions from "../components/Mentions";
 const LocationScreen = props => {
   // on sauvegarde la page
   Cookies.set("CurrentPage", "/LocationScreen", { expires: 7 });
-  // On initialise la variable zip à Location
+  // On initialise le code postal
   const [zip, setZip] = useState(Cookies.get("Location"));
   // On initialise la liste des codes postaux à tableau vide
   const [zipList, setZipList] = useState([]);
 
   const fetchData = async () => {
     try {
+      // on fait appel à l'API
       const response = await axios.get(
         `https://vicopo.selfbuild.fr/cherche/${zip}`
       );
-      setZipList(response.data);
-      console.log(response.data);
+      setZipList(response.data.cities);
+      console.log(response.data.cities);
     } catch (error) {
       console.log("error message", error.message);
     }
@@ -32,26 +33,26 @@ const LocationScreen = props => {
       // exécute l'appel à l'API
       fetchData();
     }
-  }, [zip]); // on demande à React de déclencher l'événement au moment ou on rempli l'input
+  }, [zip]); // on demande à React de déclencher l'événement au moment où on rempli l'input
 
+  // tableau qui va contenir la liste des villes
   const arrayCity = [];
-  if (zipList.cities !== undefined) {
-    for (let i = 0; i < zipList.cities.length; i++) {
-      const id = zipList.cities[i];
-      let city = id.city;
-      let code = id.code;
-      arrayCity.push(city + " (" + code + ")");
+  // Si la ville existe
+  if (zipList !== undefined) {
+    for (let i = 0; i < zipList.length; i++) {
+      arrayCity.push(zipList[i].city + " (" + zipList[i].code + ")");
     }
   }
 
+  // input qui va contenir la ville sélectionné
   const result = [];
   for (let j = 0; j < arrayCity.length; j++) {
     result.push(
       <li
         key={j}
         onClick={() => {
-          setZip(arrayCity[j]);
           props.setCity(arrayCity[j]);
+          setZip(arrayCity[j]);
         }}
       >
         {arrayCity[j]}

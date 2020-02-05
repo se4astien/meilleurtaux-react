@@ -10,41 +10,36 @@ import Mentions from "../components/Mentions";
 const UseScreen = props => {
   Cookies.set("CurrentPage", "/UsageScreen", { expires: 7 });
 
-  // fonction pour mettre à jour l'état 'use'
-  const onChangePrincipal = () => {
-    props.setUse("Résidence Principale");
-  };
-  const onChangeSecond = () => {
-    props.setUse("Résidence Secondaire");
-  };
-  const onChangeLoc = () => {
-    props.setUse("Investissement Locatif");
-  };
-
   return (
     <div className="wrapper">
       <Title title="Usage du bien" />
       <div className="content-box flex">
         <InputRadio
           name="Résidence Principale"
-          onChange={onChangePrincipal}
           checked={props.use === "Résidence Principale" ? true : false}
+          onChange={event => {
+            props.setUse(event.target.checked);
+          }}
           className={
             props.use === "Résidence Principale" ? "box-selected" : "box"
           }
         />
         <InputRadio
           name="Résidence Secondaire"
-          onChange={onChangeSecond}
           checked={props.use === "Résidence Secondaire" ? true : false}
+          onChange={event => {
+            props.setUse(event.target.checked);
+          }}
           className={
             props.use === "Résidence Secondaire" ? "box-selected" : "box"
           }
         />
         <InputRadio
           name="Investissement Locatif"
-          onChange={onChangeLoc}
           checked={props.use === "Investissement Locatif" ? true : false}
+          onChange={event => {
+            props.setUse(event.target.checked);
+          }}
           className={
             props.use === "Investissement Locatif" ? "box-selected" : "box"
           }

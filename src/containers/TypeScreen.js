@@ -11,28 +11,26 @@ const TypeScreen = props => {
   // On sauvegarde le cookie pendant 7 jours
   Cookies.set("CurrentPage", "/TypeScreen", { expires: 7 });
 
-  // fonction pour mettre à jour l'état de 'type'
-  const onChangeHouse = () => {
-    props.setType("Maison");
-  };
-  const onChangeAppartment = () => {
-    props.setType("Appartement");
-  };
-
   return (
     <div className="wrapper">
       <Title title="Type de bien" />
       <div className="content-box flex">
         <InputRadio
           name="Maison"
-          onChange={onChangeHouse}
+          // Si le type est égal à maison
           checked={props.type === "Maison" ? true : false}
+          // On met à jour la valeur type
+          onChange={event => {
+            props.setType(event.target.checked);
+          }}
           className={props.type === "Maison" ? "box-selected" : "box"}
         />
         <InputRadio
           name="Appartement"
-          onChange={onChangeAppartment}
           checked={props.type === "Appartement" ? true : false}
+          onChange={event => {
+            props.setType(event.target.checked);
+          }}
           className={props.type === "Appartement" ? "box-selected" : "box"}
         />
       </div>

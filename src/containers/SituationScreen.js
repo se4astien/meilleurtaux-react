@@ -16,32 +16,32 @@ const SituationScreen = props => {
       <div className="content-box flex">
         <InputRadio
           name={"Locataire"}
-          onChange={event => {
-            props.setSituation(event.target.name);
-          }}
           checked={props.situation === "Locataire" ? true : false}
+          onChange={event => {
+            props.setSituation(event.target.checked);
+          }}
           className={props.situation === "Locataire" ? "box-selected" : "box"}
         />
         <InputRadio
           name={"Propriétaire"}
-          onChange={event => {
-            props.setSituation(event.target.name);
-          }}
           checked={props.situation === "Propriétaire" ? true : false}
+          onChange={event => {
+            props.setSituation(event.target.checked);
+          }}
           className={
             props.situation === "Propriétaire" ? "box-selected" : "box"
           }
         />
         <InputRadio
           name={"Bénéficiaire d'un logement de fonction"}
-          onChange={event => {
-            props.setSituation(event.target.name);
-          }}
           checked={
             props.situation === "Bénéficiaire d'un logement de fonction"
               ? true
               : false
           }
+          onChange={event => {
+            props.setSituation(event.target.checked);
+          }}
           className={
             props.situation === "Bénéficiaire d'un logement de fonction"
               ? "box-selected"

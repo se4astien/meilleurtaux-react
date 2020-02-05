@@ -11,26 +11,24 @@ const EtatScreen = props => {
   // On sauvegarde le cookie (nom + valeur + durée)
   Cookies.set("CurrentPage", "/EtatScreen", { expires: 7 });
 
-  const onChangeOld = () => {
-    props.setEtat("Ancien");
-  };
-  const onChangeNew = () => {
-    props.setEtat("Neuf");
-  };
   return (
     <div className="wrapper">
       <Title title="Etat du bien" />
       <div className="content-box flex">
         <InputRadio
           name="Ancien"
-          onChange={onChangeOld}
           checked={props.etat === "Ancien" ? true : false}
+          onChange={event => {
+            props.setEtat(event.target.checked);
+          }}
           className={props.etat === "Ancien" ? "box-selected" : "box"}
         />
         <InputRadio
           name="Neuf"
-          onChange={onChangeNew}
           checked={props.etat === "Neuf" ? true : false}
+          onChange={event => {
+            props.setEtat(event.target.checked);
+          }}
           className={props.etat === "Neuf" ? "box-selected" : "box"}
         />
       </div>
