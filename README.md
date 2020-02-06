@@ -1,6 +1,10 @@
 # Meilleurtaux FullStack Project React/NodeJS
 
-Foobar is a Python library for dealing with word pluralization.
+React project with frontend, Back office and Backend with Express / Node.js on Heroku.  
+Data hosted on MongoDB via mLab.  
+Email notification is sent with Mailgun after filling the form.  
+VIPOCO API for the zip code autocompletion.   
+Cookies for data persistence.
 
 ## Installation
 
@@ -10,11 +14,24 @@ Use terminal et npm to install dependancies.
 npx create-react-app meilleurtaux
 npm install axios
 npm install js-cookie
+npm install ...
 ```
 
 ## Deploiement
 
 https://meilleurtaux-react.netlify.com
+
+## Requirements
+
+Navigation with React Router .  
+Use VIPOCO API https://vicopo.selfbuild.fr/   
+The user can keep going through the screen and go back to previous screens without loosing data (global state & cookies) .  
+If the user close the session, next visit he will be redirected to the last page visited.     
+All required inputs must be fulfilled in order to go trough .  
+Alerting user when an input is required .  
+Storing new request on database and send an email to user with all the data .  
+Back-office to read and remove the requests .  
+Error handling and notification for the user .  
 
 ## Screenshots
 
