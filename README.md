@@ -1,10 +1,10 @@
 # Meilleurtaux FullStack Project React/NodeJS
 
-React project with frontend, Back office and Backend with Express / Node.js on Heroku.  
-Data hosted on MongoDB via mLab.  
-Email notification is sent with Mailgun after filling the form.  
-VIPOCO API for the zip code autocompletion.   
+Project created with React for the frontend and the back office and Express / Node for the Backend deployed on Heroku.
+Data hosted on MongoDB via mLab.
 Cookies for data persistence.
+Email notification send by Mailgun with all data after filling the form.
+Back Office with password to read and/or remove all data.
 
 ## Installation
 
@@ -23,15 +23,16 @@ https://meilleurtaux-react.netlify.com
 
 ## Requirements
 
-Navigation with React Router .  
-Use VIPOCO API https://vicopo.selfbuild.fr/   
-The user can keep going through the screen and go back to previous screens without loosing data (global state & cookies) .  
-If the user close the session, next visit he will be redirected to the last page visited.     
-All required inputs must be fulfilled in order to go trough .  
-Alerting user when an input is required .  
-Storing new request on database and send an email to user with all the data .  
-Back-office to read and remove the requests .  
-Error handling and notification for the user .  
+Navigation with React Router.
+The user can keep going through the screen and go back to previous screens without loosing data (global state & cookies).  
+If the user close the session and re-open it, it could be possible to reload the last page visited.     
+All required inputs must be fulfilled in order to go trough.
+Alerting user when an input is required.
+Use VIPOCO API for the zip code autocompletion.
+When user finish to fill all inputs, a notification will send by email to the user. 
+Storing new request on database and send an email to user with all the data.  
+Back-office to read and remove the requests.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Screenshots
 
@@ -41,9 +42,6 @@ Error handling and notification for the user .
 ![](https://github.com/se4astien/meilleurtaux-react/blob/master/src/screenshots/meilleurtaux-04.png)
 ![](https://github.com/se4astien/meilleurtaux-react/blob/master/src/screenshots/meilleurtaux-05.png)
 
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
