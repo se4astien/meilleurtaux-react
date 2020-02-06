@@ -6,8 +6,8 @@ import Cookies from "js-cookie";
 const AdminScreen = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [folders, setFolders] = useState([]);
-  // const [password, setPassword] = useState(Cookies.get("Password")); // Password vaudra "tothemoon"
-  const [password, setPassword] = useState("tothemoon");
+  const [password, setPassword] = useState(Cookies.get("Password")); // Password vaudra "tothemoon"
+  // const [password, setPassword] = useState("tothemoon");
   const [watchPassword, setWatchPassword] = useState(false);
 
   const fetchData = async () => {
