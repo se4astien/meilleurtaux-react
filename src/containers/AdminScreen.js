@@ -79,7 +79,7 @@ const AdminScreen = () => {
       ) : (
         // On rentre dans le cas où isLoading est égal à true
         <div className="wrapper">
-          <h2>Bonjour Administrateur</h2>
+          <h2>Tableau de bord</h2>
           <div className="dashboard">
             <ul className="tab">
               <li>Code Postal / Ville</li>

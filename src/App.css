@@ -320,13 +320,19 @@ footer p a {
 .dashboard {
   margin-top: 20px;
 }
+.dashboard ul li {
+  cursor: pointer;
+  margin: 0;
+  padding: 10px 0;
+}
 .dashboard .tab {
   color: #ff9e23;
 }
 .dashboard .tab,
 .dashboard ul li ul {
   display: flex;
-  margin: 20px 0;
+  margin: 0;
+  padding: 10px;
 }
 .dashboard .tab li,
 .dashboard ul li ul li {
@@ -345,8 +351,14 @@ footer p a {
   display: flex;
   cursor: pointer;
 }
-.dashboard ul li {
+.dashboard .folders-list li {
   cursor: pointer;
+}
+.dashboard .folders-list > li:nth-child(odd) {
+  background-color: #eee;
+}
+.dashboard .folders-list > li:nth-child(even) {
+  background-color: #fff;
 }
 
 .folder-desc {
