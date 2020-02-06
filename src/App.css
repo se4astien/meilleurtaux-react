@@ -6,9 +6,21 @@ body {
   color: #000;
 }
 
+.wrapper {
+  margin: 0 auto;
+  width: 96vw;
+  max-width: 1200px;
+}
+
 a {
   text-decoration: none;
   color: #000;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .flex {
@@ -20,30 +32,12 @@ a {
   visibility: hidden;
 }
 
-.admin {
-  width: auto;
-}
-/* 
-button {
-  border: none;
-  background: transparent;
-  color: white;
-  font-size: 18px;
-} */
-
 .bg-grey {
   background-color: #f1f1f1;
 }
 
 .padding {
   padding: 10px 20px;
-}
-
-.wrapper {
-  margin: 0 auto;
-  width: 96vw;
-  max-width: 1100px;
-  padding: 0 15px;
 }
 
 .title {
@@ -66,7 +60,6 @@ header {
   padding: 25px 0;
   border-bottom: 1px solid #f0f0f0;
 }
-
 header h1 {
   margin: 0;
   margin-top: -5px;
@@ -304,4 +297,74 @@ footer p a {
 .folder-number {
   color: #ff9e23;
   font-size: 1.5rem;
+}
+
+/* ADMIN */
+.admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.admin label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+.admin button {
+  cursor: pointer;
+}
+.admin-access {
+  margin: 0 10px;
+}
+
+.dashboard {
+  margin-top: 20px;
+}
+.dashboard .tab {
+  color: #ff9e23;
+}
+.dashboard .tab,
+.dashboard ul li ul {
+  display: flex;
+  margin: 20px 0;
+}
+.dashboard .tab li,
+.dashboard ul li ul li {
+  flex: 1;
+}
+/* .dashboard ul.folders-list > li:nth-child(odd) {
+  background-color: #b7b7b7;
+} */
+.dashboard ul li ul div:first-child {
+  flex: 5;
+}
+.dashboard ul li ul div:last-child {
+  flex: 1;
+}
+.dashboard ul li ul div a {
+  display: flex;
+  cursor: pointer;
+}
+.dashboard ul li {
+  cursor: pointer;
+}
+
+.folder-desc {
+  margin-top: 30px;
+  list-style-type: disc;
+}
+.folder-desc li {
+  margin: 5px 0 5px 50px;
+}
+.folder-desc li span {
+  color: #ff9e23;
+}
+.folder-desc li span.ref {
+  color: rgb(25, 118, 210);
+}
+
+.return {
+  margin-top: 30px;
+  text-decoration: underline;
+  font-size: 1.2rem;
 }

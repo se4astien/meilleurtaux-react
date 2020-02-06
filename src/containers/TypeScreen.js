@@ -8,7 +8,7 @@ import Step from "../components/Step";
 import Mentions from "../components/Mentions";
 
 const TypeScreen = props => {
-  // On sauvegarde le cookie pendant 7 jours
+  // On sauvegarde la page dans un cookie pendant 7 jours
   Cookies.set("CurrentPage", "/TypeScreen", { expires: 7 });
 
   return (
@@ -17,7 +17,7 @@ const TypeScreen = props => {
       <div className="content-box flex">
         <InputRadio
           name="Maison"
-          // Si le type est égal à maison
+          // Permet de vérifier si le bouton radio est coché ou non
           checked={props.type === "Maison" ? true : false}
           // On met à jour la valeur type
           onChange={event => {
@@ -27,6 +27,7 @@ const TypeScreen = props => {
         />
         <InputRadio
           name="Appartement"
+          // Permet de vérifier si le bouton radio est coché ou non
           checked={props.type === "Appartement" ? true : false}
           onChange={event => {
             props.setType(event.target.name);
@@ -35,13 +36,12 @@ const TypeScreen = props => {
         />
       </div>
       <Step
-        next="/EtatScreen"
-        state={props.type}
-        nameCookie="Type"
-        valueCookie={props.type}
-        namePage="Type"
-        pages={props.pages}
-        setPages={props.setPages}
+        // On envoie plusieurs paramètres à Step
+        next="/EtatScreen" // page suivante
+        state={props.type} // la valeur de type
+        nameCookie="Type" // le nom du cookie
+        valueCookie={props.type} // la valeur du cookie
+        namePage="Type" // le nom de la page
         step={0}
       />
       <Mentions />

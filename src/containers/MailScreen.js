@@ -18,7 +18,7 @@ const MailScreen = props => {
     try {
       // On envoie les éléménts à la BDD
       const response = await axios.post(
-        "https://meilleurtaux-back.herokuapp.com/createprojet",
+        "https://meilleurtaux-back.herokuapp.com/create-project",
         {
           type: props.type,
           state: props.etat,
@@ -33,7 +33,7 @@ const MailScreen = props => {
           mail: props.mail
         }
       );
-      props.setDossier(response.data);
+      props.setFolder(response.data);
     } catch (error) {}
   };
 
@@ -54,7 +54,7 @@ const MailScreen = props => {
         <div className="content-box">
           <div className="flex padding bg-grey">
             <div className="inside">
-              <label>Adresse e-mail emprunteur *</label>
+              <label>Adresse e-mail de l'emprunteur *</label>
               <input
                 className="input"
                 type="text"
@@ -98,6 +98,7 @@ const MailScreen = props => {
           </div>
 
           {props.mail === "" ? (
+            // Si l'email n'est pas rempli
             <p
               className="next"
               onClick={() => {

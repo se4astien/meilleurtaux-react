@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Mentions = () => {
   return (
@@ -10,9 +9,6 @@ const Mentions = () => {
           <span className="legalMention">Mentions Légales</span>
         </span>
       </div>
-      <Link to="/Admin">
-        <p style={{ color: "black" }}>Admin Screen</p>
-      </Link>
     </footer>
   );
 };

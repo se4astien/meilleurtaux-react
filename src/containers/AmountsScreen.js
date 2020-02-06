@@ -30,9 +30,9 @@ const AmountScreen = props => {
       parseFloat(notaryPrice);
   }
 
-  console.log("total", total);
+  //console.log("total", total);
 
-  let result = Math.ceil((5 / 8) * 100);
+  let result = Math.ceil((5 / 8) * 100); // progress bar
 
   return (
     <section>

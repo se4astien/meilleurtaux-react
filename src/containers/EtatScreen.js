@@ -8,7 +8,7 @@ import Step from "../components/Step";
 import Mentions from "../components/Mentions";
 
 const EtatScreen = props => {
-  // On sauvegarde le cookie (nom + valeur + durée)
+  // On sauvegarde la page dans un cookie (nom + valeur + durée)
   Cookies.set("CurrentPage", "/EtatScreen", { expires: 7 });
 
   return (

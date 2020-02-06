@@ -8,6 +8,7 @@ import Step from "../components/Step";
 import Mentions from "../components/Mentions";
 
 const UseScreen = props => {
+  // On sauvegarde la page dans un cookie
   Cookies.set("CurrentPage", "/UsageScreen", { expires: 7 });
 
   return (

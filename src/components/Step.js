@@ -33,7 +33,7 @@ const Step = props => {
         <Link to={props.next}>
           <p
             className="next"
-            // Au clik sur suivant, on va sauvegarder le cookie
+            // Au click sur suivant, on sauvegarde le cookie
             onClick={() => {
               Cookies.set(props.nameCookie, props.valueCookie, { expires: 7 });
             }}

@@ -26,9 +26,9 @@ import Header from "./components/Header";
 function App() {
   // Initialisation des states
   // --- Screen 01
-  const [type, setType] = useState(Cookies.get("Type"));
+  const [type, setType] = useState(Cookies.get("Type")); // On accède à la valeur du cookie => vaudra "Maison" ou "Appartement"
   // --- Screen 02
-  const [etat, setEtat] = useState(Cookies.get("Etat"));
+  const [etat, setEtat] = useState(Cookies.get("Etat")); // Etat vaudra "Ancien" ou "Neuf"
   // --- Screen 03
   const [use, setUse] = useState(Cookies.get("Usage"));
   // --- Screen 04
@@ -46,8 +46,8 @@ function App() {
   // --- Screen 07
   const [mail, setMail] = useState(Cookies.get("Mail"));
   // --- Affiche le numéro du dossier
-  const [dossier, setDossier] = useState("");
-  // --- permet de sauvegarder la page en cours si l'utilisateur ferme l'onglet
+  const [folder, setFolder] = useState("");
+  // --- permet de récupérer la page en cours si l'utilisateur ferme l'onglet
   const [pages, setPages] = useState(Cookies.get("CurrentPage"));
 
   return (
@@ -109,11 +109,11 @@ function App() {
             amountWorks={amountWorks}
             notary={notary}
             total={total}
-            setDossier={setDossier}
+            setFolder={setFolder}
           />
         </Route>
         <Route path="/FinishScreen">
-          <FinishScreen dossier={dossier} />
+          <FinishScreen folder={folder} />
         </Route>
         <Route path="/Admin">
           <AdminScreen />
