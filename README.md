@@ -1,3 +1,31 @@
+# Meilleurtaux FullStack Project React/NodeJS
+
+Foobar is a Python library for dealing with word pluralization.
+
+## Installation
+
+Use terminal et npm to install dependancies.
+
+```javascript
+npx create-react-app meilleurtaux
+npm install axios
+npm install js-cookie
+```
+
+## Deploiement
+
+https://meilleurtaux-react.netlify.com
+
+## Screenshots
+
+![](https://github.com/se4astien/meilleurtaux-react/blob/master/src/screenshots/meilleurtaux-01.png)
+![](https://github.com/se4astien/meilleurtaux-react/blob/master/src/screenshots/meilleurtaux-02.png)
+![](https://github.com/se4astien/meilleurtaux-react/blob/master/src/screenshots/meilleurtaux-03.png)
+![](https://github.com/se4astien/meilleurtaux-react/blob/master/src/screenshots/meilleurtaux-04.png)
+![](https://github.com/se4astien/meilleurtaux-react/blob/master/src/screenshots/meilleurtaux-05.png)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
