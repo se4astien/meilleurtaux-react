@@ -338,9 +338,6 @@ footer p a {
 .dashboard ul li ul li {
   flex: 1;
 }
-/* .dashboard ul.folders-list > li:nth-child(odd) {
-  background-color: #b7b7b7;
-} */
 .dashboard ul li ul div:first-child {
   flex: 5;
 }
